@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='edit.css') }}">
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="/{{ slug }}/edit/">
+        <label for="title">Title*</label>
+        {% if title %}
+            <input name="title" type="text" value="{{ title }}">
+        {% else %}
+            <input name="title" type="text" value="Enter a title">
+        {% endif %}
+
+        <label for="slug">Slug*</label>
+        <input name="slug" type="text" value="{{ slug }}">
+
+        <label for="title">Datetime</label>
+        <input name="datetime" type="text" value="{{ datetime }}">
+
+        <label for="title">Private</label>
+        {% if private %}
+            <input name="private" type="checkbox" value="private" checked="checked">
+        {% else %}
+            <input name="private" type="checkbox" value="private">
+        {% endif %}
+
+        <label for="title">Content</label>
+        <textarea name="content">{{ raw_content }}</textarea>
+
+        <input type="submit" value="Save">
+        <p><a href="/{{ slug }}/">Visit page</a></p>
+    </form>
+{% endblock %}

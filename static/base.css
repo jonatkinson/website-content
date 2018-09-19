@@ -1,0 +1,43 @@
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px
+}
+
+h1, h2, h3 {
+    line-height: 1.2
+}
+
+pre {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    overflow-y: scroll;
+}
+
+code {
+    font-size: 16px;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #222;
+}
+
+a:visited {
+    color: #222;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input, textarea {
+    border: 1px solid #aaa;
+}
